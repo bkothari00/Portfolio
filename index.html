@@ -1607,5 +1607,12 @@ function end(){if(!on)return;on=0;el.classList.remove('dg');el.style.transform='
 el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end);el.addEventListener('dragstart',function(e){e.preventDefault()})})}
 })();</script>
 <script id="nosJs">(function(){var o=show;show=function(v){o(v);document.body.classList.toggle("on-about",v==="about")}})();</script>
+<script id="route">(function(){var M={work:'work',play:'play',about:'about',zynga:'season-pass',water:'waterway',duo:'duoconvo-cafe',cy:'cyrtan-energy',gi:'google-itinerary',pv:'privy',ov:'oviact'},R={},k;for(k in M)R[M[k]]=k;
+var o=show,mute=0;
+function setH(v){var h=M[v];if(!h||mute)return;try{var u=v==='work'?location.pathname+location.search:'#'+h;if((location.hash||'')!==(v==='work'?'':'#'+h))history.pushState(null,'',u)}catch(e){}}
+show=function(v){o(v);setH(v)};
+function fromHash(){var h=(location.hash||'').replace('#',''),v=R[h]||'work';mute=1;try{show(v)}finally{mute=0}}
+addEventListener('popstate',fromHash);addEventListener('hashchange',fromHash);
+if(location.hash&&R[location.hash.replace('#','')])fromHash();})();</script>
 </body>
 </html>
