@@ -175,7 +175,7 @@ b{font-weight:600}
 .ink{font-family:"Ink","Pinyon Script","Snell Roundhand",cursive}
 .realink .ink{-webkit-text-stroke:0;filter:none}
 /* Tritopani for script headings */
-@font-face{font-family:"Tritopani";src:url(assets/font-9c47840914.otf) format("opentype");font-display:swap}
+@font-face{font-family:"Tritopani";src:url(font-9c47840914.otf) format("opentype");font-display:swap}
 .ink,.realink .ink{font-family:"Tritopani","Pinyon Script","Snell Roundhand",cursive;-webkit-text-stroke:0;filter:none}
 /* Tritopani has a small x-height, so script sizes are larger than the type scale */
 h1,.case-h{font-size:96px}
