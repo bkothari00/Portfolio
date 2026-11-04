@@ -1288,94 +1288,7 @@ figcaption,.fig figcaption{font-size:var(--t-small)!important;line-height:1.45!i
 .hh h1 .hi-l,#v-about .abtxt .hlab{color:#B5547F!important}
 .hw-k,.keytag{font-size:12px!important}
 
-/* --- block: intro, three stars shoot in and land (Design, Business, Technology) --- */
-.hxrow{display:flex;flex-wrap:wrap;gap:14px clamp(20px,2.6vw,40px);margin:0 0 clamp(22px,2.4vw,34px)}
-.hxg{position:relative;display:flex;align-items:center;gap:10px}
-.hxg .hxf{position:relative;width:34px;height:34px;flex:none}
-.hxg .hxs{display:block;width:34px;height:34px}
-.hxg .hxt{position:absolute;left:50%;bottom:50%;width:100px;height:72px;opacity:0;pointer-events:none}
-.hxg .hxb{position:absolute;left:17px;top:17px;width:64px;height:64px;margin:-32px 0 0 -32px;opacity:0;pointer-events:none}
-.hxg .hxl{font:500 12px/1 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--tc)}
-html.intro .hxg .hxf{animation:shoot 1.05s var(--dl) cubic-bezier(.16,.8,.3,1) both}
-html.intro .hxg .hxt{animation:trail 1.05s var(--dl) linear both}
-html.intro .hxg .hxb{animation:burst .7s calc(var(--dl) + 1s) ease-out both}
-html.intro .hxg .hxl{animation:labin .5s calc(var(--dl) + .95s) ease-out both}
-html.intro .htxt>:not(.hxrow){animation:hrev .8s 1.9s ease-out both}
-html.intro .hcollage{animation:hrev .9s 1.6s ease-out both}
-@keyframes shoot{0%{transform:translate(calc(min(900px,90vw)*.82),calc(min(900px,90vw)*-.57)) scale(.5);opacity:0}12%{opacity:1}100%{transform:none;opacity:1}}
-@keyframes trail{0%{opacity:0}12%,70%{opacity:1}100%{opacity:0}}
-@keyframes burst{0%{opacity:0;transform:scale(.3)}30%{opacity:1}100%{opacity:0;transform:scale(1.35)}}
-@keyframes labin{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
-@keyframes hrev{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){html.intro *{animation:none!important}}
-@media(max-width:560px){.hxrow{gap:10px 14px}.hxg{gap:6px}.hxg .hxf,.hxg .hxs{width:24px;height:24px}.hxg .hxb{left:12px;top:12px;width:48px;height:48px;margin:-24px 0 0 -24px}.hxg .hxl{font-size:10.5px;letter-spacing:.06em}}
-
-/* --- preview: white splash intro (all rules scoped to #splash, sp- prefix) --- */
-#splash{position:fixed;inset:0;z-index:1000;background:#fff;color:#16161A;font-family:Inter,system-ui,sans-serif;overflow:hidden;opacity:1;transition:opacity .9s ease;--s:56px;--cd:#BFE59C;--cb:#D2C0F0;--ct:#BCD2F6;-webkit-font-smoothing:antialiased}
-#splash.out{opacity:0;pointer-events:none}
-#splash[hidden]{display:none!important}
-#splash *{box-sizing:border-box}
-#splash .sp-sky{position:absolute;inset:0;pointer-events:none}
-#splash .sp-sky i{position:absolute;width:2px;height:2px;background:#16161A;opacity:.04;animation:sptw var(--t,4s) steps(2,end) var(--w,0s) infinite}
-@keyframes sptw{0%,100%{opacity:.04}50%{opacity:.2}}
-#splash .sp-stage{position:relative;min-height:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 16px}
-#splash .sp-row{display:flex;gap:clamp(30px,8vw,104px);align-items:flex-start;justify-content:center}
-#splash .sp-g{display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0}
-#splash .sp-fly{position:relative;width:var(--s);height:var(--s);opacity:0}
-#splash .sp-fly svg{display:block;width:100%;height:100%;overflow:visible;position:relative;z-index:2}
-#splash .sp-dot{position:absolute;background:var(--c);z-index:1}
-#splash .sp-bu{position:absolute;left:50%;top:50%;width:0;height:0;z-index:3}
-#splash .sp-bu b{position:absolute;left:-2px;top:-2px;width:4px;height:4px;background:var(--c);opacity:0}
-#splash .sp-bu b:nth-child(odd){background:var(--lc)}
-#splash .sp-lab{font:500 12px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--lc);opacity:0}
-#splash .sp-txt{display:grid;grid-template-rows:0fr;transition:grid-template-rows 1s cubic-bezier(.2,.7,.2,1)}
-#splash .sp-txt.open{grid-template-rows:1fr}
-#splash .sp-txt>div{min-height:0;overflow:hidden}
-#splash .sp-in{padding-top:56px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px}
-#splash .sp-hi{margin:0;font:500 13px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase;color:#7A7886;opacity:0}
-#splash .sp-h1{margin:0;font-weight:600;font-size:clamp(28px,4.7vw,56px);line-height:1.12;letter-spacing:-.025em;max-width:19em;text-wrap:balance;opacity:0}
-#splash em{font-style:normal}
-#splash .sp-d{color:#2F7500}#splash .sp-b{color:#6B3FB5}#splash .sp-t{color:#1A5FD0}
-#splash .sp-sub{margin:0;font-size:clamp(15px,1.5vw,17px);line-height:1.65;color:#5A5A66;max-width:58ch;opacity:0;padding-bottom:6px;display:flex;flex-direction:column;gap:4px}
-#splash .sp-sub span{display:block;text-wrap:balance}
-#splash .sp-skip{position:absolute;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:none;border:1px solid #D9D9DF;color:#7A7886;font:400 11px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;padding:10px 14px;border-radius:999px;cursor:pointer}
-#splash.play .sp-fly{animation:spfly 1.35s var(--d) cubic-bezier(.12,.72,.28,1) both}
-@keyframes spfly{0%{opacity:0;transform:translate(var(--sx),var(--sy))}6%{opacity:1}100%{opacity:1;transform:translate(0,0)}}
-#splash.play .sp-fly svg{animation:sptw2 1.6s calc(var(--d) + 1.5s) steps(2,end) infinite}
-@keyframes sptw2{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
-#splash.play .sp-dot{animation:sptf .55s calc(var(--d) + 1.15s) steps(5,end) forwards}
-@keyframes sptf{to{opacity:0}}
-#splash.play .sp-bu b{animation:spbu .75s calc(var(--d) + 1.3s) steps(7,end) forwards}
-@keyframes spbu{0%{opacity:1;transform:translate(calc(var(--dx)*var(--s)*.28),calc(var(--dy)*var(--s)*.28))}100%{opacity:0;transform:translate(calc(var(--dx)*var(--s)*1.05),calc(var(--dy)*var(--s)*1.05))}}
-#splash.play .sp-lab{animation:splab .6s calc(var(--d) + 1.35s) ease-out forwards}
-@keyframes splab{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-#splash.play .sp-hi{animation:sprise .8s 3.1s cubic-bezier(.2,.7,.2,1) forwards}
-#splash.play .sp-h1{animation:sprise .9s 3.4s cubic-bezier(.2,.7,.2,1) forwards}
-#splash.play .sp-sub{animation:sprise .9s 3.8s cubic-bezier(.2,.7,.2,1) forwards}
-@keyframes sprise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-html.sp-lock,html.sp-lock body{overflow:hidden!important}
-@media(max-width:560px){#splash{--s:38px}#splash .sp-row{gap:18px}#splash .sp-lab{font-size:10px;letter-spacing:.1em}#splash .sp-in{padding-top:40px}}
-@media(prefers-reduced-motion:reduce){#splash{display:none!important}}
-
-/* --- preview: hero floaters (Design / Business / Technology) + collage float --- */
-.hcollage{position:relative}
-.hfl{position:absolute;z-index:8;display:flex;align-items:center;gap:8px;pointer-events:none;opacity:0;left:var(--x);top:var(--y)}
-.hfl svg{width:30px;height:30px;flex:none;overflow:visible;filter:drop-shadow(0 3px 4px rgba(0,0,0,.12))}
-.hfl span{font:500 11px/1 "DM Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--lc);background:rgba(255,255,255,.88);padding:5px 8px;border-radius:999px}
-html.sp-done .hfl{animation:hflin .8s var(--di) ease-out forwards,hflo var(--dur) calc(var(--di) + .8s) ease-in-out infinite}
-html.sp-done .hfl svg{animation:hftw 1.8s steps(2,end) infinite}
-@keyframes hflin{from{opacity:0}to{opacity:1}}
-@keyframes hflo{0%,100%{translate:0 0}25%{translate:16px -12px}50%{translate:-6px -20px}75%{translate:-16px -6px}}
-@keyframes hftw{0%,100%{scale:1}50%{scale:1.16}}
-html.sp-done .hcollage .cwrap{animation:cfl 8s ease-in-out infinite}
-@keyframes cfl{0%,100%{translate:0 0;rotate:0deg}33%{translate:0 -7px;rotate:.5deg}66%{translate:0 4px;rotate:-.4deg}}
-.hcollage .cwrap>img:first-child,.hcollage .an{transition:translate .5s cubic-bezier(.2,.7,.2,1)}
-@media(max-width:800px){.hfl svg{width:24px;height:24px}.hfl span{font-size:10px;padding:4px 6px}}
-@media(prefers-reduced-motion:reduce){.hfl{opacity:1;animation:none!important}html.sp-done .hcollage .cwrap{animation:none}}
-#splash .sp-txt{display:none!important}
-html.sp-done .hcollage .cwrap{animation:none!important}.hcollage .cwrap>img:first-child,.hcollage .an{transition:none!important}
-
-/* --- preview: "What I bring" stars shoot in and land --- */
+/* --- block: "What I bring" stars shoot in and land --- */
 #v-work .hw-s{position:relative;overflow:visible}
 #v-work .hw-s{height:80px}#v-work .hw-s .hs-f{position:relative;width:72px;height:72px;opacity:0}
 #v-work .hw-s .hs-f svg{display:block;width:100%;height:100%;overflow:visible;position:relative;z-index:2}
@@ -1391,9 +1304,10 @@ html.sp-done .hcollage .cwrap{animation:none!important}.hcollage .cwrap>img:firs
 @media(max-width:720px){#v-work .hw-s{height:64px}#v-work .hw-s .hs-f{width:56px;height:56px}}
 @media(prefers-reduced-motion:reduce){#v-work .hw-s .hs-f{opacity:1!important;animation:none!important}#v-work .hw-s .hs-d,#v-work .hw-s .hs-b{display:none}}
 
-/* --- preview: match "What I bring" eyebrow + heading to the hero --- */
+/* --- block: "What I bring" eyebrow and heading match the hero --- */
 #v-work .hw-k{font-family:"Inter",system-ui,sans-serif!important;font-weight:500!important;letter-spacing:.04em!important;text-transform:none!important;color:#B5547F!important;font-size:clamp(12px,.9vw,16px)!important;margin:0 0 14px!important}
 #v-work .hw h2{font-weight:600!important;letter-spacing:-.035em!important}
 #v-work .hw-c{cursor:default}#v-work .hw-c:hover .hw-s svg{transform:none}
 
-#splash{display:none}html.sp-on #splash{display:block}
+/* --- block: sticky nav with a solid background --- */
+nav{background:var(--bg,#fff);box-shadow:0 0 0 100vmax var(--bg,#fff);clip-path:inset(0 -100vmax);z-index:20}
