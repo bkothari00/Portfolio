@@ -55,7 +55,7 @@
     });
   }
   function ease(p){return 1-Math.pow(1-p,3)}
-  function place(n,x,y){n.px=x;n.py=y;n.el.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px) translate(-50%,-50%)'}
+  function place(n,x,y){if(n.k==='proj'&&n.el){var hw=n.el.offsetWidth/2+10;x=Math.max(hw,Math.min(W-hw,x))}n.px=x;n.py=y;n.el.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px) translate(-50%,-50%)'}
 
   function frame(now){
     var t=(now-t0)/1000;

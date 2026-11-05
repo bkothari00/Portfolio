@@ -1411,3 +1411,5 @@ nav{background:var(--bg,#fff);box-shadow:0 0 0 100vmax var(--bg,#fff);clip-path:
 .hh{padding-bottom:16px!important}
 #hmap{height:clamp(500px,66vh,620px)}
 @media(max-width:520px){#hmap{height:640px}.hh{padding-bottom:8px!important}}
+
+@media(hover:none),(pointer:coarse){.rv{opacity:1!important;transform:none!important}}
