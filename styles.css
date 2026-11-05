@@ -1408,3 +1408,6 @@ nav{background:var(--bg,#fff);box-shadow:0 0 0 100vmax var(--bg,#fff);clip-path:
 @media(prefers-reduced-motion:reduce){#hmap .root .hm-click{animation:none}}
 #hmap .root .hm-click{text-shadow:0 0 4px #fff,0 0 4px #fff,0 0 6px #fff}
 #hmap .star .lb,#hmap .kt,#hmap .kmusic .sp,#hmap .root .hm-click{letter-spacing:.06em}
+.hh{padding-bottom:16px!important}
+#hmap{height:clamp(500px,66vh,620px)}
+@media(max-width:520px){#hmap{height:640px}.hh{padding-bottom:8px!important}}
