@@ -1020,7 +1020,7 @@ figcaption,.fig figcaption{font-size:var(--t-small)!important;line-height:1.45!i
 .hw-c{cursor:default}.hw-c:hover .hw-s svg{transform:none}
 
 /* --- block: sticky nav with a solid background --- */
-nav{background:var(--bg,#fff);box-shadow:0 0 0 100vmax var(--bg,#fff);clip-path:inset(0 -100vmax);z-index:20}
+nav{z-index:20;isolation:isolate}nav::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:var(--bg,#fff);z-index:-1}html,body{overflow-x:clip}
 
 /* hero node map */
 #hmap{position:relative;height:clamp(520px,72vh,700px);overflow:visible;isolation:isolate;--bg:transparent;--fg:#283618;--sub:#556;--dim:#8a8a84;--line:#BDBBB2;--edge:#D8D6CE;--card:#fff;--design:#A5D67A;--business:#BBA3E8;--tech:#9DBDF0;--pink:#E0689E;color:#283618;font-family:Inter,system-ui,sans-serif}
@@ -1120,3 +1120,4 @@ nav{background:var(--bg,#fff);box-shadow:0 0 0 100vmax var(--bg,#fff);clip-path:
 
 @media(hover:none),(pointer:coarse){.rv{opacity:1!important;transform:none!important}}raw{
 }#hmap .dot.c1{background:#A5D67A}#hmap .dot.c2{background:#BBA3E8}#hmap .dot.c3{background:#9DBDF0}
+@media(max-width:800px){nav{position:relative!important;top:auto!important}}
