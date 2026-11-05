@@ -1194,18 +1194,18 @@ nav .ava .avn{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:up
 #v-about .mdt{margin-top:28px}#v-about .mdt h3{margin:0 0 12px}#v-about .mdt .chips{gap:2px 10px;align-items:baseline}#v-about .mdt .tg{background:none!important;padding:0;font:500 16px/1.5 Inter,sans-serif;letter-spacing:0;text-transform:none}#v-about .mdt .tg:not(:last-child)::after{content:"\00b7";margin-left:10px;color:#b5b5b5}
 
 /* --- block 60 (hw) --- */
-#v-work .hw{padding:72px 0 120px}#v-work .hw-k{font:500 11px "DM Mono",monospace;letter-spacing:.12em;color:#D9697E;margin:0 0 8px}
-#v-work .hw h2{font-size:30.25px;line-height:1.15;margin:0 0 36px;letter-spacing:-.01em;text-wrap:balance}
-#v-work .hw-g{display:grid;grid-template-columns:repeat(3,1fr)}
-#v-work .hw-c{display:flex;flex-direction:column;gap:16px;padding:0 32px;text-decoration:none;color:inherit;border-left:1px solid #e6e6e6}
-#v-work .hw-c:first-child{border-left:0;padding-left:0}
-#v-work .hw-s{height:120px;display:flex;align-items:center}
-#v-work .hw-s svg{width:112px;height:112px;fill:var(--c);transition:transform .3s}
-#v-work .hw-c:hover .hw-s svg{transform:rotate(12deg) scale(1.06)}
-#v-work .hw-t{font:500 12px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--t)}
-#v-work .hw-c p{margin:0;font-size:16px;line-height:1.5;max-width:300px}
-#v-work .hw-l{font:400 12px "DM Mono",monospace;color:#888}
-@media(max-width:720px){#v-work .hw{padding-top:48px}#v-work .hw h2{font-size:24.1px}#v-work .hw-g{grid-template-columns:1fr;gap:28px}#v-work .hw-c,#v-work .hw-c:first-child{border:0;padding:0}#v-work .hw-s{height:88px}#v-work .hw-s svg{width:80px;height:80px}}
+.hw{padding:72px 0 120px}.hw-k{font:500 11px "DM Mono",monospace;letter-spacing:.12em;color:#D9697E;margin:0 0 8px}
+.hw h2{font-size:30.25px;line-height:1.15;margin:0 0 36px;letter-spacing:-.01em;text-wrap:balance}
+.hw-g{display:grid;grid-template-columns:repeat(3,1fr)}
+.hw-c{display:flex;flex-direction:column;gap:16px;padding:0 32px;text-decoration:none;color:inherit;border-left:1px solid #e6e6e6}
+.hw-c:first-child{border-left:0;padding-left:0}
+.hw-s{height:120px;display:flex;align-items:center}
+.hw-s svg{width:112px;height:112px;fill:var(--c);transition:transform .3s}
+.hw-c:hover .hw-s svg{transform:rotate(12deg) scale(1.06)}
+.hw-t{font:500 12px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--t)}
+.hw-c p{margin:0;font-size:16px;line-height:1.5;max-width:300px}
+.hw-l{font:400 12px "DM Mono",monospace;color:#888}
+@media(max-width:720px){.hw{padding-top:48px}.hw h2{font-size:24.1px}.hw-g{grid-template-columns:1fr;gap:28px}.hw-c,.hw-c:first-child{border:0;padding:0}.hw-s{height:88px}.hw-s svg{width:80px;height:80px}}
 
 /* --- block 61 (abD) --- */
 #v-about .stk{touch-action:none;cursor:grab;transition:translate .35s ease-out,rotate .45s cubic-bezier(.2,.7,.2,1),scale .45s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.3,1.6,.5,1)}
@@ -1289,25 +1289,25 @@ figcaption,.fig figcaption{font-size:var(--t-small)!important;line-height:1.45!i
 .hw-k,.keytag{font-size:12px!important}
 
 /* --- block: "What I bring" stars shoot in and land --- */
-#v-work .hw-s{position:relative;overflow:visible}
-#v-work .hw-s{height:80px}#v-work .hw-s .hs-f{position:relative;width:72px;height:72px;opacity:0}
-#v-work .hw-s .hs-f svg{display:block;width:100%;height:100%;overflow:visible;position:relative;z-index:2}
-#v-work .hw-s .hs-d{position:absolute;background:var(--c);z-index:1}
-#v-work .hw-s .hs-b{position:absolute;left:50%;top:50%;width:0;height:0;z-index:3}
-#v-work .hw-s .hs-b b{position:absolute;left:-2px;top:-2px;width:4px;height:4px;background:var(--t);opacity:0}
-#v-work .hw.hs-go .hs-f{animation:hsfly 1.3s var(--hd) cubic-bezier(.12,.72,.28,1) both}
+.hw-s{position:relative;overflow:visible}
+.hw-s{height:80px}.hw-s .hs-f{position:relative;width:72px;height:72px;opacity:0}
+.hw-s .hs-f svg{display:block;width:100%;height:100%;overflow:visible;position:relative;z-index:2}
+.hw-s .hs-d{position:absolute;background:var(--c);z-index:1}
+.hw-s .hs-b{position:absolute;left:50%;top:50%;width:0;height:0;z-index:3}
+.hw-s .hs-b b{position:absolute;left:-2px;top:-2px;width:4px;height:4px;background:var(--t);opacity:0}
+.hw.hs-go .hs-f{animation:hsfly 1.3s var(--hd) cubic-bezier(.12,.72,.28,1) both}
 @keyframes hsfly{0%{opacity:0;transform:translate(var(--sx),var(--sy))}6%{opacity:1}100%{opacity:1;transform:none}}
-#v-work .hw.hs-go .hs-d{animation:hstf .5s calc(var(--hd) + 1.1s) steps(5,end) forwards}
+.hw.hs-go .hs-d{animation:hstf .5s calc(var(--hd) + 1.1s) steps(5,end) forwards}
 @keyframes hstf{to{opacity:0}}
-#v-work .hw.hs-go .hs-b b{animation:hsbu .7s calc(var(--hd) + 1.25s) steps(7,end) forwards}
+.hw.hs-go .hs-b b{animation:hsbu .7s calc(var(--hd) + 1.25s) steps(7,end) forwards}
 @keyframes hsbu{0%{opacity:1;transform:translate(calc(var(--dx)*20px),calc(var(--dy)*20px))}100%{opacity:0;transform:translate(calc(var(--dx)*62px),calc(var(--dy)*62px))}}
-@media(max-width:720px){#v-work .hw-s{height:64px}#v-work .hw-s .hs-f{width:56px;height:56px}}
-@media(prefers-reduced-motion:reduce){#v-work .hw-s .hs-f{opacity:1!important;animation:none!important}#v-work .hw-s .hs-d,#v-work .hw-s .hs-b{display:none}}
+@media(max-width:720px){.hw-s{height:64px}.hw-s .hs-f{width:56px;height:56px}}
+@media(prefers-reduced-motion:reduce){.hw-s .hs-f{opacity:1!important;animation:none!important}.hw-s .hs-d,.hw-s .hs-b{display:none}}
 
 /* --- block: "What I bring" eyebrow and heading match the hero --- */
-#v-work .hw-k{font-family:"Inter",system-ui,sans-serif!important;font-weight:500!important;letter-spacing:.04em!important;text-transform:none!important;color:#B5547F!important;font-size:clamp(12px,.9vw,16px)!important;margin:0 0 14px!important}
-#v-work .hw h2{font-weight:600!important;letter-spacing:-.035em!important}
-#v-work .hw-c{cursor:default}#v-work .hw-c:hover .hw-s svg{transform:none}
+.hw-k{font-family:"Inter",system-ui,sans-serif!important;font-weight:500!important;letter-spacing:.04em!important;text-transform:none!important;color:#B5547F!important;font-size:clamp(12px,.9vw,16px)!important;margin:0 0 14px!important}
+.hw h2{font-weight:600!important;letter-spacing:-.035em!important}
+.hw-c{cursor:default}.hw-c:hover .hw-s svg{transform:none}
 
 /* --- block: sticky nav with a solid background --- */
 nav{background:var(--bg,#fff);box-shadow:0 0 0 100vmax var(--bg,#fff);clip-path:inset(0 -100vmax);z-index:20}
@@ -1398,7 +1398,7 @@ nav{background:var(--bg,#fff);box-shadow:0 0 0 100vmax var(--bg,#fff);clip-path:
 #hmap .kmusic .eq u:nth-child(2){animation-delay:.2s}#hmap .kmusic .eq u:nth-child(3){animation-delay:.4s}
 #hmap .kmusic .go{font:500 12px/1 Inter,sans-serif;color:#1a8c42;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:520px){#hmap{height:640px}}
-#v-work .hw-s .hs-f{opacity:1!important;animation:none!important}#v-work .hw.hs-go .hs-f{animation:none!important}#v-work .hw-s .hs-d,#v-work .hw-s .hs-b{display:none!important}
+.hw-s .hs-f{opacity:1!important;animation:none!important}.hw.hs-go .hs-f{animation:none!important}.hw-s .hs-d,.hw-s .hs-b{display:none!important}
 #hmap .root{background:#B5547F;border-color:#B5547F;color:#fff;box-shadow:0 2px 10px -4px rgba(181,84,127,.5)}
 #hmap .root:hover,#hmap .root:focus-visible{border-color:#8F3C61}
 #hmap .root .hm-hint{border-color:#E8C94F;border-width:1.5px}

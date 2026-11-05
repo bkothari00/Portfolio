@@ -245,7 +245,7 @@ if(location.hash&&R[location.hash.replace('#','')])fromHash();})();
 
 /* --- "What I bring": pixel stars shoot in and land when scrolled into view --- */
 (function(){
-  var hw=document.querySelector('#v-work .hw');if(!hw)return;
+  var hw=document.querySelector('.hw');if(!hw)return;
   var PX=[[5,0],[5,1],[5,2],[5,8],[5,9],[5,10],[0,5],[1,5],[2,5],[8,5],[9,5],[10,5]];
   for(var x=4;x<=6;x++)PX.push([x,3],[x,7]);for(var y=3;y<=7;y++)PX.push([y,4],[y,5],[y,6]);
   var CORE={'4,5':1,'5,5':1,'6,5':1,'5,4':1,'5,6':1},RAYS=[[1,0],[.7,.7],[0,1],[-.7,.7],[-1,0],[-.7,-.7],[0,-1],[.7,-.7]];
