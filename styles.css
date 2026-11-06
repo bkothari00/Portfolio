@@ -1121,3 +1121,4 @@ nav{z-index:20;isolation:isolate}nav::before{content:"";position:absolute;top:0;
 @media(hover:none),(pointer:coarse){.rv{opacity:1!important;transform:none!important}}raw{
 }#hmap .dot.c1{background:#A5D67A}#hmap .dot.c2{background:#BBA3E8}#hmap .dot.c3{background:#9DBDF0}
 @media(max-width:800px){nav{position:relative!important;top:auto!important}}
+.case-top::before,.desk::before,.board::before,.binder::before{display:none!important}
